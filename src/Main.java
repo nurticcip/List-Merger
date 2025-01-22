@@ -52,6 +52,5 @@ public class Main {
         System.out.println("t is "+t);
         System.out.println("z is "+z);
 
-
     }
 }
