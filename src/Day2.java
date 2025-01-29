@@ -1,7 +1,10 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.stream.Stream;
 
 public class Day2 {
+
     public static void main(String[] args){
 
         //Casting examples
@@ -80,6 +83,8 @@ public class Day2 {
         double[] darr = {1.0, 2.0,3.0};
         int[] iarr = {1,2,3,4};
 
+        System.out.println("Max number is "+iarr[iarr.length-2]);
+
         System.out.println(Arrays.toString(darr));
 
         //command line arguments
@@ -103,8 +108,10 @@ public class Day2 {
             System.out.println("You're a regular student ");
         }
         */
-        System.out.println("Your monthly mortgage is " +mortgageCalculator());
+        //System.out.println("Your monthly mortgage is " +mortgageCalculator());
+
     }
+
 
     public static double mortgageCalculator(){
         double monthlyPayment, interestRate, loanDuration, principalAmount;
