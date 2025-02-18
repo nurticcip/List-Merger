@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Animal {
     private String name;
     private int age;
@@ -29,6 +31,11 @@ public class Animal {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public void eat2(Animal a){
+        Cat c = new Cat("koshka", 1, true);
+        a = c;
     }
 }
 
@@ -75,6 +82,8 @@ class Cat extends Animal{
     public void eat(){
         System.out.println("Cat is drinking milk");
     }
+
+
 }
 
 class AnimalKingdom{
@@ -87,8 +96,13 @@ class AnimalKingdom{
         animal2.makeSound(); animal2.eat();
         animal3.makeSound(); animal3.eat();
 
+        animal1.eat2(animal2);
+
+        System.out.println(animal2 instanceof Dog);
+
     }
 }
+
 
 
 
