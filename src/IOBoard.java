@@ -2,8 +2,11 @@ import java.io.Serializable;
 
 interface IOInterface{
     int interfaceMember=4;
-    public void show();
-    public void describe();
+    void show();
+    void describe();
+    default void info(){
+        System.out.println("something");
+    }
 }
 abstract class IOBoard {
     String name;
@@ -75,8 +78,8 @@ class IOEthernetBoard extends IOBoard implements IOInterface {
 
     @Override
     public void show() {
-
     }
+
 }
 
 class BoardMain{
